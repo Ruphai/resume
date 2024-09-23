@@ -9,3 +9,7 @@
 
 - **M.Sc.**, GeoData Science, University of South Brittany, Vannes, France
 
+## Research Interests
+- Earth Observation
+- Machine Learning
+- Hydrometeorological Hazards

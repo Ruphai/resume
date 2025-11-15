@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_567a5f8559d097adfed98c5a6cd49e3e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ardhi/Leaflet.MousePosition/src/L.Control.MousePosition.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-minimap/3.6.1/Control.MiniMap.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-ant-path@1.1.2/dist/leaflet-ant-path.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/iso8601-js-period@0.2.1/iso8601.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-timedimension@1.1.1/dist/leaflet.timedimension.control.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_567a5f8559d097adfed98c5a6cd49e3e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_567a5f8559d097adfed98c5a6cd49e3e = L.map(
+                "map_567a5f8559d097adfed98c5a6cd49e3e",
+                {
+                    center: [36.4294548875, -13.808031699999999],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 3,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_567a5f8559d097adfed98c5a6cd49e3e);
+
+            
+
+        
+    
+            var tile_layer_485db6516b1d9019a79c6b59f7501eac = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_485db6516b1d9019a79c6b59f7501eac.addTo(map_567a5f8559d097adfed98c5a6cd49e3e);
+        
+    
+            L.control.fullscreen(
+                {
+  "position": "topright",
+  "title": "Full Screen",
+  "titleCancel": "Exit Full Screen",
+  "forceSeparateButton": false,
+}
+            ).addTo(map_567a5f8559d097adfed98c5a6cd49e3e);
+        
+    
+            var mouse_position_aecb6c6c6de6b0206380ebae60c8b708 = new L.Control.MousePosition(
+                {
+  "position": "bottomleft",
+  "separator": " : ",
+  "emptyString": "Unavailable",
+  "lngFirst": false,
+  "numDigits": 5,
+  "prefix": "",
+}
+            );
+            mouse_position_aecb6c6c6de6b0206380ebae60c8b708.options["latFormatter"] =
+                undefined;
+            mouse_position_aecb6c6c6de6b0206380ebae60c8b708.options["lngFormatter"] =
+                undefined;
+            map_567a5f8559d097adfed98c5a6cd49e3e.addControl(mouse_position_aecb6c6c6de6b0206380ebae60c8b708);
+        
+    
+            var tile_layer_e1a7fe1c58078f4bdb8f18fad0d96dd3 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detect_retina": false, "max_native_zoom": 19, "max_zoom": 19, "min_zoom": 0, "no_wrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+            var mini_map_cb49bf6408b62a4b6d47c41b737d6d83 = new L.Control.MiniMap(
+                tile_layer_e1a7fe1c58078f4bdb8f18fad0d96dd3,
+                {
+  "position": "bottomright",
+  "width": 150,
+  "height": 150,
+  "collapsedWidth": 25,
+  "collapsedHeight": 25,
+  "zoomLevelOffset": -5,
+  "centerFixed": false,
+  "zoomAnimation": false,
+  "toggleDisplay": true,
+  "autoToggleDisplay": false,
+  "minimized": false,
+}
+            );
+            map_567a5f8559d097adfed98c5a6cd49e3e.addControl(mini_map_cb49bf6408b62a4b6d47c41b737d6d83);
+        
+    
+            var locate_control_e3233b0f5da91e9fbf1022bde4b9c4ec = L.control.locate(
+                {}
+            ).addTo(map_567a5f8559d097adfed98c5a6cd49e3e);
+            
+        
+    
+            ant_path_516fdab2956bd3b71bb17209eada931a = L.polyline.antPath(
+              [[7.0209686, 5.0567477], [9.0643305, 7.4892974], [47.7981346, 13.0464806], [52.0799838, 4.3113461], [47.6586772, -2.7599079], [46.6559455, 11.2302129], [42.2625621, -71.8018877], [38.8950368, -77.0365427]],
+              {
+  "stroke": true,
+  "color": "#ff7f0e",
+  "weight": 4,
+  "opacity": 0.8,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#ff7f0e",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 800,
+  "pulseColor": "#FFFFFF",
+}
+        ).addTo(map_567a5f8559d097adfed98c5a6cd49e3e);
+        
+    
+            ant_path_516fdab2956bd3b71bb17209eada931a.bindTooltip(
+                `<div>
+                     Career path
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_fa5aa0616813b1092cfad7dd2bed6c32 = L.marker(
+                [7.0209686, 5.0567477],
+                {
+}
+            ).addTo(map_567a5f8559d097adfed98c5a6cd49e3e);
+        
+    
+            var icon_af69db13a2d3cca3e83c89f1e8fe5037 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7a6564118f7f35a940a89b1c2c2ea69d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ef902c61f41669292e772dacb59c684f = $(`<div id="html_ef902c61f41669292e772dacb59c684f" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 13px;">       <b>Ondo, Nigeria</b><br>       <b>Role:</b> Undergraduate<br>       <b>Organization:</b> FUTA<br>       <b>Years:</b> 2015–2019<br>       <hr style="margin:4px 0;">       <i>Meteorology and Climate Science</i>     </div>     </div>`)[0];
+                popup_7a6564118f7f35a940a89b1c2c2ea69d.setContent(html_ef902c61f41669292e772dacb59c684f);
+            
+        
+
+        marker_fa5aa0616813b1092cfad7dd2bed6c32.bindPopup(popup_7a6564118f7f35a940a89b1c2c2ea69d)
+        ;
+
+        
+    
+    
+            marker_fa5aa0616813b1092cfad7dd2bed6c32.bindTooltip(
+                `<div>
+                     Undergraduate (2015–2019)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fa5aa0616813b1092cfad7dd2bed6c32.setIcon(icon_af69db13a2d3cca3e83c89f1e8fe5037);
+            
+    
+            var marker_6955bd3e7fa8d43e1d8217055287a5bd = L.marker(
+                [9.0643305, 7.4892974],
+                {
+}
+            ).addTo(map_567a5f8559d097adfed98c5a6cd49e3e);
+        
+    
+            var icon_227d2abb109344fa01c438425ca124b3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "flask",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b87a24b3944945faa59fdad019064864 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_82ebec191762b290cf3c219c4eb10b55 = $(`<div id="html_82ebec191762b290cf3c219c4eb10b55" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 13px;">       <b>Abuja, Nigeria</b><br>       <b>Role:</b> Research Intern<br>       <b>Organization:</b> NASRDA<br>       <b>Years:</b> 2018–2018<br>       <hr style="margin:4px 0;">       <i>Applied Remote Sensing</i>     </div>     </div>`)[0];
+                popup_b87a24b3944945faa59fdad019064864.setContent(html_82ebec191762b290cf3c219c4eb10b55);
+            
+        
+
+        marker_6955bd3e7fa8d43e1d8217055287a5bd.bindPopup(popup_b87a24b3944945faa59fdad019064864)
+        ;
+
+        
+    
+    
+            marker_6955bd3e7fa8d43e1d8217055287a5bd.bindTooltip(
+                `<div>
+                     Research Intern (2018–2018)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6955bd3e7fa8d43e1d8217055287a5bd.setIcon(icon_227d2abb109344fa01c438425ca124b3);
+            
+    
+            var marker_ae731158b24dff33a7a715b33175eee1 = L.marker(
+                [47.7981346, 13.0464806],
+                {
+}
+            ).addTo(map_567a5f8559d097adfed98c5a6cd49e3e);
+        
+    
+            var icon_545544f8c06eb335184379f8bdc1d6ec = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_83aee82098f9c500f9435f82de23bc6e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_35d251bed809a2b4e3fd316b9950dbd5 = $(`<div id="html_35d251bed809a2b4e3fd316b9950dbd5" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 13px;">       <b>Salzburg, Austria</b><br>       <b>Role:</b> Graduate Student<br>       <b>Organization:</b> University of Salzburg<br>       <b>Years:</b> 2020–2021<br>       <hr style="margin:4px 0;">       <i>Earth Observation and Geoinformatics</i>     </div>     </div>`)[0];
+                popup_83aee82098f9c500f9435f82de23bc6e.setContent(html_35d251bed809a2b4e3fd316b9950dbd5);
+            
+        
+
+        marker_ae731158b24dff33a7a715b33175eee1.bindPopup(popup_83aee82098f9c500f9435f82de23bc6e)
+        ;
+
+        
+    
+    
+            marker_ae731158b24dff33a7a715b33175eee1.bindTooltip(
+                `<div>
+                     Graduate Student (2020–2021)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ae731158b24dff33a7a715b33175eee1.setIcon(icon_545544f8c06eb335184379f8bdc1d6ec);
+            
+    
+            var marker_874caf5ae3bfb4308c6e3f2daeeb3e54 = L.marker(
+                [52.0799838, 4.3113461],
+                {
+}
+            ).addTo(map_567a5f8559d097adfed98c5a6cd49e3e);
+        
+    
+            var icon_7cee7fdab7abbc84977f5da35626dad5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "flask",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ac9b11daeda0b6a9d3b834b9f87e8d92 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c13a83bd4f662167a8fa855945f54371 = $(`<div id="html_c13a83bd4f662167a8fa855945f54371" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 13px;">       <b>The Hague, The Netherlands</b><br>       <b>Role:</b> Geospatial Analyst Intern<br>       <b>Organization:</b> Space4Good<br>       <b>Years:</b> 2021–2021<br>       <hr style="margin:4px 0;">       <i>Geospatial Analyst Internship</i>     </div>     </div>`)[0];
+                popup_ac9b11daeda0b6a9d3b834b9f87e8d92.setContent(html_c13a83bd4f662167a8fa855945f54371);
+            
+        
+
+        marker_874caf5ae3bfb4308c6e3f2daeeb3e54.bindPopup(popup_ac9b11daeda0b6a9d3b834b9f87e8d92)
+        ;
+
+        
+    
+    
+            marker_874caf5ae3bfb4308c6e3f2daeeb3e54.bindTooltip(
+                `<div>
+                     Geospatial Analyst Intern (2021–2021)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_874caf5ae3bfb4308c6e3f2daeeb3e54.setIcon(icon_7cee7fdab7abbc84977f5da35626dad5);
+            
+    
+            var marker_15ce2d41a6bf63a9f3df9eb9e96b6088 = L.marker(
+                [47.6586772, -2.7599079],
+                {
+}
+            ).addTo(map_567a5f8559d097adfed98c5a6cd49e3e);
+        
+    
+            var icon_9f7c5ad11e21eb3c0a787f3f78f3bbbd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7326a58a5d7a0c5a97b8685222bdd1a7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_18ee62edbf4d88014412ff02dce2b45f = $(`<div id="html_18ee62edbf4d88014412ff02dce2b45f" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 13px;">       <b>Vannes, France</b><br>       <b>Role:</b> Graduate Student<br>       <b>Organization:</b> University of South Brittany<br>       <b>Years:</b> 2021–2022<br>       <hr style="margin:4px 0;">       <i>Geo Data Science</i>     </div>     </div>`)[0];
+                popup_7326a58a5d7a0c5a97b8685222bdd1a7.setContent(html_18ee62edbf4d88014412ff02dce2b45f);
+            
+        
+
+        marker_15ce2d41a6bf63a9f3df9eb9e96b6088.bindPopup(popup_7326a58a5d7a0c5a97b8685222bdd1a7)
+        ;
+
+        
+    
+    
+            marker_15ce2d41a6bf63a9f3df9eb9e96b6088.bindTooltip(
+                `<div>
+                     Graduate Student (2021–2022)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_15ce2d41a6bf63a9f3df9eb9e96b6088.setIcon(icon_9f7c5ad11e21eb3c0a787f3f78f3bbbd);
+            
+    
+            var marker_c9f8416c39dc268b34f8ff60eeb097e4 = L.marker(
+                [46.6559455, 11.2302129],
+                {
+}
+            ).addTo(map_567a5f8559d097adfed98c5a6cd49e3e);
+        
+    
+            var icon_82c777836ac886bb29fa3025096d4391 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "purple",
+  "iconColor": "white",
+  "icon": "flask",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_80d0f9d1b95b15ca8668f4d580154025 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8675367f70a41a8f77b23783d0ca222d = $(`<div id="html_8675367f70a41a8f77b23783d0ca222d" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 13px;">       <b>Bolzano, Italy</b><br>       <b>Role:</b> Earth Observation Research<br>       <b>Organization:</b> EURAC<br>       <b>Years:</b> 2022–2024<br>       <hr style="margin:4px 0;">       <i>Earth Observation Data Science</i>     </div>     </div>`)[0];
+                popup_80d0f9d1b95b15ca8668f4d580154025.setContent(html_8675367f70a41a8f77b23783d0ca222d);
+            
+        
+
+        marker_c9f8416c39dc268b34f8ff60eeb097e4.bindPopup(popup_80d0f9d1b95b15ca8668f4d580154025)
+        ;
+
+        
+    
+    
+            marker_c9f8416c39dc268b34f8ff60eeb097e4.bindTooltip(
+                `<div>
+                     Earth Observation Research (2022–2024)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c9f8416c39dc268b34f8ff60eeb097e4.setIcon(icon_82c777836ac886bb29fa3025096d4391);
+            
+    
+            var marker_baf01fa9f80a2ab7d14c111b9b870faa = L.marker(
+                [42.2625621, -71.8018877],
+                {
+}
+            ).addTo(map_567a5f8559d097adfed98c5a6cd49e3e);
+        
+    
+            var icon_06f06bbcd5de3ffd41000fff00841444 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "graduation-cap",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_299e694aa3224d8cd49fa5577684026a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a40c7e0df6e76ba6162697eb3a76f8db = $(`<div id="html_a40c7e0df6e76ba6162697eb3a76f8db" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 13px;">       <b>Worcester, United States</b><br>       <b>Role:</b> PhD Student<br>       <b>Organization:</b> Clark University<br>       <b>Years:</b> 2024–2028<br>       <hr style="margin:4px 0;">       <i>AI in Earth Observation</i>     </div>     </div>`)[0];
+                popup_299e694aa3224d8cd49fa5577684026a.setContent(html_a40c7e0df6e76ba6162697eb3a76f8db);
+            
+        
+
+        marker_baf01fa9f80a2ab7d14c111b9b870faa.bindPopup(popup_299e694aa3224d8cd49fa5577684026a)
+        ;
+
+        
+    
+    
+            marker_baf01fa9f80a2ab7d14c111b9b870faa.bindTooltip(
+                `<div>
+                     PhD Student (2024–2028)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_baf01fa9f80a2ab7d14c111b9b870faa.setIcon(icon_06f06bbcd5de3ffd41000fff00841444);
+            
+    
+            var marker_73d833728342c575d6b911d25e09ae7f = L.marker(
+                [38.8950368, -77.0365427],
+                {
+}
+            ).addTo(map_567a5f8559d097adfed98c5a6cd49e3e);
+        
+    
+            var icon_cefa2066706059cd69b2cd2f3f21a036 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "orange",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e2dd13b2d423f876e267e031a64ddf73 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f743b1d03e64c15f7f34c75ad30add71 = $(`<div id="html_f743b1d03e64c15f7f34c75ad30add71" style="width: 100.0%; height: 100.0%;">     <div style="font-size: 13px;">       <b>Washington D.C., United States</b><br>       <b>Role:</b> Fellow<br>       <b>Organization:</b> NASA Lifelines<br>       <b>Years:</b> 2025–2025<br>       <hr style="margin:4px 0;">       <i>GeoAI for Humanitarian Action</i>     </div>     </div>`)[0];
+                popup_e2dd13b2d423f876e267e031a64ddf73.setContent(html_f743b1d03e64c15f7f34c75ad30add71);
+            
+        
+
+        marker_73d833728342c575d6b911d25e09ae7f.bindPopup(popup_e2dd13b2d423f876e267e031a64ddf73)
+        ;
+
+        
+    
+    
+            marker_73d833728342c575d6b911d25e09ae7f.bindTooltip(
+                `<div>
+                     Fellow (2025–2025)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_73d833728342c575d6b911d25e09ae7f.setIcon(icon_cefa2066706059cd69b2cd2f3f21a036);
+            
+    
+            L.Control.TimeDimensionCustom = L.Control.TimeDimension.extend({
+                _getDisplayDateFormat: function(date){
+                    var newdate = new moment(date);
+                    console.log(newdate)
+                    return newdate.format("YYYY");
+                }
+            });
+            map_567a5f8559d097adfed98c5a6cd49e3e.timeDimension = L.timeDimension(
+                {
+                    period: "P1Y",
+                }
+            );
+            var timeDimensionControl = new L.Control.TimeDimensionCustom(
+                {
+  "position": "bottomleft",
+  "minSpeed": 0.1,
+  "maxSpeed": 1,
+  "autoPlay": true,
+  "loopButton": true,
+  "timeSliderDragUpdate": true,
+  "speedSlider": true,
+  "playerOptions": {
+  "transitionTime": 200,
+  "loop": false,
+  "startOver": true,
+},
+}
+            );
+            map_567a5f8559d097adfed98c5a6cd49e3e.addControl(this.timeDimensionControl);
+
+            var geoJsonLayer = L.geoJson({"type": "FeatureCollection", "features": [{"type": "Feature", "geometry": {"type": "Point", "coordinates": [5.0567477, 7.0209686]}, "properties": {"time": "2015-01-01", "popup": "\n    <div style=\"font-size: 13px;\">\n      <b>Ondo, Nigeria</b><br>\n      <b>Role:</b> Undergraduate<br>\n      <b>Org:</b> FUTA<br>\n      <b>Years:</b> 2015\u20132019<br>\n      <i>Meteorology and Climate Science</i>\n    </div>\n    ", "icon": "circle", "style": {"color": "green", "fillColor": "green", "radius": 8}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [7.4892974, 9.0643305]}, "properties": {"time": "2018-01-01", "popup": "\n    <div style=\"font-size: 13px;\">\n      <b>Abuja, Nigeria</b><br>\n      <b>Role:</b> Research Intern<br>\n      <b>Org:</b> NASRDA<br>\n      <b>Years:</b> 2018\u20132018<br>\n      <i>Applied Remote Sensing</i>\n    </div>\n    ", "icon": "circle", "style": {"color": "purple", "fillColor": "purple", "radius": 8}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [13.0464806, 47.7981346]}, "properties": {"time": "2020-01-01", "popup": "\n    <div style=\"font-size: 13px;\">\n      <b>Salzburg, Austria</b><br>\n      <b>Role:</b> Graduate Student<br>\n      <b>Org:</b> University of Salzburg<br>\n      <b>Years:</b> 2020\u20132021<br>\n      <i>Earth Observation and Geoinformatics</i>\n    </div>\n    ", "icon": "circle", "style": {"color": "green", "fillColor": "green", "radius": 8}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [4.3113461, 52.0799838]}, "properties": {"time": "2021-01-01", "popup": "\n    <div style=\"font-size: 13px;\">\n      <b>The Hague, The Netherlands</b><br>\n      <b>Role:</b> Geospatial Analyst Intern<br>\n      <b>Org:</b> Space4Good<br>\n      <b>Years:</b> 2021\u20132021<br>\n      <i>Geospatial Analyst Internship</i>\n    </div>\n    ", "icon": "circle", "style": {"color": "purple", "fillColor": "purple", "radius": 8}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-2.7599079, 47.6586772]}, "properties": {"time": "2021-01-01", "popup": "\n    <div style=\"font-size: 13px;\">\n      <b>Vannes, France</b><br>\n      <b>Role:</b> Graduate Student<br>\n      <b>Org:</b> University of South Brittany<br>\n      <b>Years:</b> 2021\u20132022<br>\n      <i>Geo Data Science</i>\n    </div>\n    ", "icon": "circle", "style": {"color": "green", "fillColor": "green", "radius": 8}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [11.2302129, 46.6559455]}, "properties": {"time": "2022-01-01", "popup": "\n    <div style=\"font-size: 13px;\">\n      <b>Bolzano, Italy</b><br>\n      <b>Role:</b> Earth Observation Research<br>\n      <b>Org:</b> EURAC<br>\n      <b>Years:</b> 2022\u20132024<br>\n      <i>Earth Observation Data Science</i>\n    </div>\n    ", "icon": "circle", "style": {"color": "purple", "fillColor": "purple", "radius": 8}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-71.8018877, 42.2625621]}, "properties": {"time": "2024-01-01", "popup": "\n    <div style=\"font-size: 13px;\">\n      <b>Worcester, United States</b><br>\n      <b>Role:</b> PhD Student<br>\n      <b>Org:</b> Clark University<br>\n      <b>Years:</b> 2024\u20132028<br>\n      <i>AI in Earth Observation</i>\n    </div>\n    ", "icon": "circle", "style": {"color": "green", "fillColor": "green", "radius": 8}}}, {"type": "Feature", "geometry": {"type": "Point", "coordinates": [-77.0365427, 38.8950368]}, "properties": {"time": "2025-01-01", "popup": "\n    <div style=\"font-size: 13px;\">\n      <b>Washington D.C., United States</b><br>\n      <b>Role:</b> Fellow<br>\n      <b>Org:</b> NASA Lifelines<br>\n      <b>Years:</b> 2025\u20132025<br>\n      <i>GeoAI for Humanitarian Action</i>\n    </div>\n    ", "icon": "circle", "style": {"color": "orange", "fillColor": "orange", "radius": 8}}}]}, {
+                    pointToLayer: function (feature, latLng) {
+                        if (feature.properties.icon == 'marker') {
+                            if(feature.properties.iconstyle){
+                                return new L.Marker(latLng, {
+                                    icon: L.icon(feature.properties.iconstyle)});
+                            }
+                            //else
+                            return new L.Marker(latLng);
+                        }
+                        if (feature.properties.icon == 'circle') {
+                            if (feature.properties.iconstyle) {
+                                return new L.circleMarker(latLng, feature.properties.iconstyle)
+                                };
+                            //else
+                            return new L.circleMarker(latLng);
+                        }
+                        //else
+
+                        return new L.Marker(latLng);
+                    },
+                    style: function (feature) {
+                        return feature.properties.style;
+                    },
+                    onEachFeature: function(feature, layer) {
+                        if (feature.properties.popup) {
+                        layer.bindPopup(feature.properties.popup);
+                        }
+                        if (feature.properties.tooltip) {
+                        layer.bindTooltip(feature.properties.tooltip);
+                        }
+                    }
+                })
+
+            var timestamped_geo_json_b20f12117de0d579dd42fde57e956f6f = L.timeDimension.layer.geoJson(
+                geoJsonLayer,
+                {
+                    updateTimeDimension: true,
+                    addlastPoint: true,
+                    duration: "P1Y",
+                }
+            ).addTo(map_567a5f8559d097adfed98c5a6cd49e3e);
+        
+    
+var map = map_567a5f8559d097adfed98c5a6cd49e3e;
+var timeLayer = timestamped_geo_json_b20f12117de0d579dd42fde57e956f6f;
+
+map.timeDimension.on('timeload', function(e) {
+    var layer = timeLayer._currentLayer;
+    if (layer && layer.getBounds) {
+        map.flyToBounds(
+            layer.getBounds(), 
+            {maxZoom: 6, animate: true, duration: 1.5}
+        );
+    }
+});
+    
+            var layer_control_f229d5d5303612d80f8fb83eb4550045_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_485db6516b1d9019a79c6b59f7501eac,
+                },
+                overlays :  {
+                },
+            };
+            let layer_control_f229d5d5303612d80f8fb83eb4550045 = L.control.layers(
+                layer_control_f229d5d5303612d80f8fb83eb4550045_layers.base_layers,
+                layer_control_f229d5d5303612d80f8fb83eb4550045_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_567a5f8559d097adfed98c5a6cd49e3e);
+
+        
+</script>
+</html>
